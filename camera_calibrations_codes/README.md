@@ -4,15 +4,15 @@ Find the packages video_stream_opencv and cv_camera-master . It contains the req
 
 Run the command in terminal
 
-sudo apt-get install ros-kinetic-image-pipeline
+`sudo apt-get install ros-kinetic-image-pipeline`
 
-run roscore
+`roscore`
 
 goto catkin workspace source ./devel/setup.sh
 
-rosrun video_stream_opencv video_stream_video_stream_provider:="/dev/video0"
+`rosrun video_stream_opencv video_stream_video_stream_provider:="/dev/video0"`
 
-rosdep install camera_calibration
+`rosdep install camera_calibration`
 
 Make sure that your monocular camera is publishing images over ROS. Let's list the topics to check that the images are published:
 
@@ -52,3 +52,10 @@ Now calibrate
 the calibrated data is stored under home/[user]/.ros/camera info/head camera.yaml
 
 Few errors that could effect calibrations -'size',uneven chessboard
+
+To view the product ID , vendor ID and other information
+
+`cd etc/udev/rules.d`
+(The UDEV rules are to be added here)
+
+`dmesg`
