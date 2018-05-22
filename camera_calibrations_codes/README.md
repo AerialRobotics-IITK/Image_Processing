@@ -10,7 +10,7 @@ run roscore
 
 goto catkin workspace source ./devel/setup.sh
 
-rosrun cv_canmera cv_camera_node
+rosrun video_stream_opencv video_stream_video_stream_provider:="/dev/video0"
 
 rosdep install camera_calibration
 
@@ -20,9 +20,9 @@ $ rostopic list
 
 This will show you all the topics published, check to see that there is an image_raw topic. The default topics provided by most ROS camera drivers are:
 
-    /camera/camera_info
+    /camera
     /camera/image_raw
 
 run this command
 
-rosrun camera_calibration cameracalibrator.py --size 8x6 --square 0.108 image:=/cv_camera/image_raw camera:=/camera --no-service-check
+rosrun camera_calibration cameracalibrator.py --size 8x6(no of intersections in chessboard) --square 0.108(length of each block in meters) image:=/camera (the topic on which raw image is being published) camera:=
