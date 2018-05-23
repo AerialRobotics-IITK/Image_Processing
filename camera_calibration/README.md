@@ -46,4 +46,4 @@ the middle matrix is the point in the worlld turned into homogenous form.
 
 The left is the homogenous point in pixels i.e. scaling the real world image according to the size.
 
-In the third matrix `R` is the rotation matrix.And t is the where is the camera in the world.
+In the third matrix `R` is the rotation matrix.And t is the whereabouts the camera in the world.
