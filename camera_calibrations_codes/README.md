@@ -20,7 +20,7 @@ goto catkin workspace
 
 `source ./devel/setup.sh`
 
-`rosrun video_stream_opencv video_stream_video_stream_provider:="/dev/video0" `
+`rosrun video_stream_opencv video_stream _video_stream_provider:="/dev/video0" `
 
 `rosdep install camera_calibration`
 
