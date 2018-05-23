@@ -12,9 +12,9 @@ open single.launch file and make changes
 
 #### original file snippet
 
-`<remap from="/camera_info" to="/stereo/$(arg eye)/camera_info" />
+<remap from="/camera_info" to="/stereo/$(arg eye)/camera_info" />
 
-<remap from="/image" to="/stereo/$(arg eye)/image_rect_color" />`
+<remap from="/image" to="/stereo/$(arg eye)/image_rect_color" />
 
 #### changed snippet
 
@@ -24,7 +24,7 @@ open single.launch file and make changes
 
  `roslaunch usb_cam usb_cam-test.launch`
 
-`roslaunch aruco_ros single.launch`
+`roslaunch aruco_ros single.launch markerId:=40 markerSize:=0.1`
 
 rosrun rqt_image_view rqt_image_view
 
