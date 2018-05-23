@@ -12,15 +12,15 @@ open single.launch file and make changes
 
 #### original file snippet
 
-<remap from="/camera_info" to="/stereo/$(arg eye)/camera_info" />
+remap from="/camera_info" to="/stereo/$(arg eye)/camera_info" /
 
-<remap from="/image" to="/stereo/$(arg eye)/image_rect_color" />
+remap from="/image" to="/stereo/$(arg eye)/image_rect_color" /
 
 #### changed snippet
 
-<remap from="/camera_info" to="/usb_cam/camera_info" />
+remap from="/camera_info" to="/usb_cam/camera_info" /
 
-<remap from="/image" to="/usb_cam/image_raw" />
+remap from="/image" to="/usb_cam/image_raw" /
 
  `roslaunch usb_cam usb_cam-test.launch`
 
