@@ -41,13 +41,13 @@ run this command to open the calibration window
 
 To add usb camera
 
-`roscore
+`roscore`
 
-install usb_cam package
+`install usb_cam package`
 
-roscd usb_cam/launch
+`roscd usb_cam/launch`
 
-sudo vim usb_cam-test.launch`
+`sudo vim usb_cam-test.launch`
 
 Now change the name in launch file from dev/video0 to dev/video1 or something else
 
