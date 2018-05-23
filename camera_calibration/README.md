@@ -3,9 +3,13 @@
 [Opencv Source](https://docs.opencv.org/3.1.0/dc/dbb/tutorial_py_calibration.html)
 
 ┌       ┐
+
 │fx 0 Cx│
+
 │0 fy Cy│=Camera Matrix
+
 |0 0  1 |
+
 └       ┘
 
 For camera calibrations the camera is kept stationary while the image is moved relative to camera.
