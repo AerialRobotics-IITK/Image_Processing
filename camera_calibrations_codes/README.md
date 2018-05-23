@@ -1,7 +1,11 @@
 # Installing and Calibrating camrea to get Camera Matrix
 
+### Source
+
 [source](http://wiki.ros.org/camera_calibration/Tutorials/MonocularCalibration)
 
+
+### Installation
 Find the packages video_stream_opencv and cv_camera-master . It contains the required packages paste in source of catkin workspace. 
 
 Put those packages in the catkin workspace source and then catkin_make it and source the setup.sh file in devel folder.
