@@ -25,22 +25,22 @@ cx : distance to be added in x axis for shifting the origin along x axis.
 cy : distance to be added in y axis for shifting the origin along y axis.
  
          
-  |x|   │fx 0 Cx│ |X|
+  |x| : │fx 0 Cx│ |X|
   
   |y| = │0 fy Cy│ |Y|
   
-  |z|   |0 0  1 | |Z|
+  |z| : |0 0  1 | |Z|
          
 rightmost matrix is matrix which represent a point in the real world
 
 
 ##Complete Camera Model
 
-  |x|   │fx 0 Cx│ | f 0 0 0| |R t| |X|
+  |x| : │fx 0 Cx│ | f 0 0 0| |R t| |X|
   
   |y| = │0 fy Cy│ | 0 f 0 0| |0 1| |Y|
   
-  |z|   |0 0  1 | | 0 0 1 0|       |Z|
+  |z| : |0 0  1 | | 0 0 1 0|       |Z|
   
 the middle matrix is the point in the worlld turned into homogenous form.
 
