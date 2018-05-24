@@ -1,11 +1,16 @@
 # Aruco_Dectection
 
+### Installation
+
 [Source for aruco node installation](https://github.com/pal-robotics/aruco_ros) git clone the repository of aruco detection node
 
 In catkin workspace
 `catkin_make`
 
 `source devel/setup.sh`
+
+
+### Changes made in code
 
 now edit launch file i.e. single.launch file in (catkin_ws/src/aruco_ros-kinetic-devel/aruco_ros/launch) and change the publisher and subscriber in it
 
@@ -22,6 +27,8 @@ remap from="/image" to="/stereo/$(arg eye)/image_rect_color" /
 remap from="/camera_info" to="/usb_cam/camera_info" /
 
 remap from="/image" to="/usb_cam/image_raw" /
+
+### Launching nodes
 
 Now launch the usbcamera
 
