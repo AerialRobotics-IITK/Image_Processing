@@ -1,8 +1,12 @@
 # Aruco_Dectection
 
-### Installation
+### Source
 
 [Source for aruco node installation](https://github.com/pal-robotics/aruco_ros) git clone the repository of aruco detection node
+
+[aruco_ros a summary](https://github.com/pal-robotics/aruco_ros)
+
+[launch file creation](https://github.com/AerialRobotics-IITK/Wiki/wiki/launch-files)
 
 In catkin workspace
 `catkin_make`
