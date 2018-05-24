@@ -16,6 +16,10 @@ now edit launch file i.e. single.launch file in (catkin_ws/src/aruco_ros-kinetic
 
 `gedit single.launch` file and make changes
 
+* camera_info needs your calibration parameters
+
+* image need image from your camera .... probably \usb_cam\image_raw
+
 #### original file snippet
 
 remap from="/camera_info" to="/stereo/$(arg eye)/camera_info" /
