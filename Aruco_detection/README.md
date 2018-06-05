@@ -34,13 +34,15 @@ remap from="/image" to="/stereo/$(arg eye)/image_rect_color" /
 
 remap from="/camera_info" to="/usb_cam/camera_info" /
 
-remap from="/image" to="/usb_cam/image_raw" /
+remap from="/image" to="/usb_cam/image_rect_color" /
 
 ### Launching nodes
 
 Now launch the usbcamera
 
 `roslaunch usb_cam usb_cam-test.launch`
+
+`rosrun image_proc image_proc`
 
 Now launch the launch file of aruco node with the MarkerId and markerSize
 
