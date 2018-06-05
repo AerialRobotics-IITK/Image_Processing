@@ -43,7 +43,7 @@ To add usb camera
 
 `roscore`
 
-`install usb_cam package`
+install usb_cam node from [rosDocumentation](http://wiki.ros.org/camera_calibration/Tutorials/MonocularCalibration)
 
 `roscd usb_cam/launch`
 
