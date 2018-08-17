@@ -5,7 +5,7 @@ Course1: http://www.cse.psu.edu/~rtc12/CSE486/
 
 ## What is camera calibration and its need ?
 
-### SORCES
+### SOURCES
 
 [Opencv Source](https://docs.opencv.org/3.1.0/dc/dbb/tutorial_py_calibration.html)
 
@@ -15,35 +15,39 @@ Course1: http://www.cse.psu.edu/~rtc12/CSE486/
 
 │0 fy Cy│=Camera Matrix
 
-|0  0  1|
+|0.0 0.0 1|
 
 For camera calibrations the camera is kept stationary while the image of chessboard is moved relative to camera .
 
-For simplicity, we can say chess board was kept stationary at XY plane, (where Z=0 always) the axis being fixed on the board and camera was moved relative to board. 
+#### What we mean by Camera Calibration?
 
-The image of board in real world can be assumed to be at Z=0. And a point on that plane has a coordinate point (X,Y,Z).
+For simplicity, we can assume that during the camera calibration , chess board was kept stationary in XY plane, (where Z=0 always) the x,y,z axes being fixed on the board and camera was moved relative to board. 
 
-Now a image is formed on the camera sensor. Let the pixel on sensor point(x,y,z) whose corresponding real world image be (X,Y,Z).
+The image of board in real world can be assumed to be at Z=0. And a point on that on the board has a coordinate point (X,Y,Z).
 
-fx : the ratio of the lenghts along X axis i.e. dimension of a object on camera sensor along X axis / dimension of real world object on plane Z=0 along X axis.
+Now the image of (X,Y,Z) is formed on the camera sensor. Let the pixel on sensor point(x,y,z) whose corresponding real world image be (X,Y,Z).
 
-fy : the ratio of the lenghts along Y axis i.e. dimension of a object on camera sensor along Y axis / dimension of real world object on plane Z=0 along Y axis
 
-When we have to measure the cordinates of the light ray from an object at plane Z=0 which is falling on sensor at some point (x,y,z) on sensor .Since currently we have the origin at center of the sensor. But , we need to measure the cx and cy not from the center of the sensor but from the leftmost top position for clarity and easiness to manage data in matrix .So we need to shift  the origin from center to topmost left the adjustmunts to be made are cx and cy in (x,y).
+> fx : the ratio of the lenghts along X axis i.e. dimension of a object on camera sensor along X axis / dimension of real world object on plane Z=0 along X axis.
 
-cx : distance to be added in x coordinate of image's pixel for shifting the origin along x axis.
+> fy : the ratio of the lenghts along Y axis i.e. dimension of a object on camera sensor along Y axis / dimension of real world object on plane Z=0 along Y axis
 
-cy : distance to be added in y coordinate of image's pixel for shifting the origin along y axis.
+When we have to measure the cordinates of the light ray from an object at plane Z=0 which is falling on sensor at some point (x,y,z) on sensor .By default , the origin of coordinate axes (x,y,z) is at center of the sensor. But , for ease to measure the coordinates on camera sensor we need to measure the cx and cy not from the center of the sensor but from the leftmost and topmost position for clarity and easiness to manage data in matrix .So we need to shift the origin from center to topmost left the adjustmunts to be made are cx and cy in (x,y).
+
+> cx : distance to be added in x coordinate of image's pixel for shifting the origin along x axis.
+
+> cy : distance to be added in y coordinate of image's pixel for shifting the origin along y axis.
  
          
   |x| : │fx 0 Cx│ |X|
   
   |y| = │0 fy Cy│ |Y|
   
-  |z| : |0 0  1 | |Z|
+  |z| : |0.0 0.0  1 | |Z|
          
 rightmost matrix |X,Y,Z| is matrix which represent a point in the real world
 
+Using linear transformation we get a respective locations of real world point on the camera sensor where they are supposed to be. But as we can see that if there is some sort of misalignment between the camera feed and the mathematically determined position , then we can determine another matrix known as calibration matrix which applies a linear transformation on the camera feed and thus correcting our distortions in the feed.
 
 #### Complete Camera Model
 
@@ -55,7 +59,7 @@ rightmost matrix |X,Y,Z| is matrix which represent a point in the real world
   
 the middle matrix is the matrix to turn point in the Real world into homogenous form.
 
-> The left is the camera matrix which linearly transforms the image formed on camera sensor and makes it free from any defects (radial or linear).
+The left is the camera matrix which linearly transforms the image formed on camera sensor and makes it free from any defects (radial or linear).
 
 In the third matrix `R` is the rotation matrix.And t is the whereabouts the camera in the world.
 
@@ -64,9 +68,9 @@ We need to calculate this matrix by giving as much information as possible and f
 
 
 
-#### Camera Calibration , How its done?
+#### Camera Calibration , The installation process?
 
-# Installing and Calibrating camrea to get Camera Matrix
+## Installing and Calibrating camrea to get Camera Matrix
 
 ### Source
 
