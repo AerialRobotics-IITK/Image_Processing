@@ -70,7 +70,7 @@ We need to calculate this matrix by giving as much information as possible and f
 
 #### Camera Calibration , The installation process?
 
-## Installing and Calibrating camrea to get Camera Matrix
+## Installing and Calibrating camera to get Camera Matrix
 
 ### Source
 
@@ -143,7 +143,7 @@ To view the product ID , vendor ID and other information of usbcam
 
 ## Aruco detection
 
-# Aruco_Dectection
+# Aruco_Detection
 
 ### Source
 
